@@ -1,0 +1,12 @@
+# dependencies
+node_modules
+
+.idea
+yarn.lock
+package-lock.json
+*bak
+.vscode
+
+# production
+/dist
+/.vscode
