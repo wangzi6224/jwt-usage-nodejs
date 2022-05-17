@@ -37,7 +37,7 @@ app.get("/afterlogin", (req, res) => {
   const { headers } = req;
   const token = headers["authorization"].split(" ")[1];
   jwt.verify(token, jwtKey, (err, payload) => {
-    if (err) res.sendStatus(403);
+    if (err) return res.sendStatus(403);
     res.json({ message: "认证成功", payload });
   });
 });
